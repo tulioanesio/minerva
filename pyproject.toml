@@ -1,0 +1,26 @@
+[project]
+name = "minerva"
+version = "0.1.0"
+description = "Assistente acadêmico experimental com RAG local via terminal e Ollama."
+readme = "README.md"
+authors = [
+    { name = "tulioanesio", email = "tulioluv@gmail.com" },
+]
+requires-python = ">=3.14"
+dependencies = [
+    "numpy>=2.5.3",
+    "ollama>=0.6.3",
+    "pymupdf>=1.28.2",
+    "scikit-learn>=1.9.1",
+]
+
+[project.scripts]
+minerva = "src:main"
+
+[build-system]
+requires = ["uv_build>=0.12.24,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-root = "app"
+module-name = "src"
